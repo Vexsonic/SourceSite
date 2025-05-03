@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Highlight.js for syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+</head>
+<body>
+  <!-- Header with Search -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="logo">Script Library</h1>
+        <p class="tagline">Find and use code snippets quickly</p>
+      </div>
+      <div class="search-container">
+        <div class="search-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input 
+          type="text" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Search scripts by title or description..."
+        >
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="results-count" id="resultsCount">
+      Showing <span id="scriptCount">0</span> scripts
+    </div>
+    
+    <!-- Scripts Grid -->
+    <div class="scripts-grid" id="scriptsGrid">
+      <!-- Scripts will be inserted here by JavaScript -->
+    </div>
+
+    <!-- No Results State -->
+    <div class="no-results" id="noResults" style="display: none;">
+      <i class="fas fa-search"></i>
+      <h3>No scripts found</h3>
+      <p>Try different search terms</p>
+    </div>
+
+    <!-- Loading Placeholder -->
+    <div class="loading-container" id="loadingPlaceholder">
+      <!-- Loading placeholders created by JavaScript -->
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span>Code copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h2>Script Library</h2>
+          <p>Your collection of useful code snippets</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; <span id="currentYear">2023</span> Script Library. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
